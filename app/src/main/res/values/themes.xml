@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PonEngine" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#ff6b9d</item>
+        <item name="colorPrimaryVariant">#c94b7b</item>
+        <item name="colorOnPrimary">#ffffff</item>
+        <item name="colorSecondary">#a78bfa</item>
+        <item name="android:colorBackground">#0f0f1a</item>
+        <item name="android:statusBarColor">#0a0a14</item>
+        <item name="android:navigationBarColor">#0a0a14</item>
+    </style>
+</resources>
