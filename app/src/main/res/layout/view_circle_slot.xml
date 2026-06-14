@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#0f0f1a">
+
+    <!-- Big circle -->
+    <FrameLayout
+        android:id="@+id/circleFrame"
+        android:layout_width="280dp"
+        android:layout_height="280dp">
+
+        <!-- Circle background drawn in code -->
+        <com.pon.engine.CircleView
+            android:id="@+id/circleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!-- Center content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp">
+
+            <TextView
+                android:id="@+id/tvEventIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▶"
+                android:textSize="36sp"
+                android:textColor="#ff6b9d"/>
+
+            <TextView
+                android:id="@+id/tvEventName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="On Start"
+                android:textColor="#fff"
+                android:fontFamily="monospace"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/tvCodeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/8 blocks"
+                android:textColor="#888"
+                android:fontFamily="monospace"
+                android:textSize="11sp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Lock overlay -->
+        <FrameLayout
+            android:id="@+id/lockOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#cc0a0a18"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔒"
+                    android:textSize="40sp"/>
+
+                <Button
+                    android:id="@+id/btnUnlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Watch Ad to Unlock"
+                    android:textColor="#fff"
+                    android:backgroundTint="#ff6b9d"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- Mini code blocks grid -->
+    <GridLayout
+        android:id="@+id/codeGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:layout_marginTop="20dp"
+        android:useDefaultMargins="true"/>
+
+    <!-- Edit event button -->
+    <Button
+        android:id="@+id/btnEditEvent"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="✏ Edit Event &amp; Codes"
+        android:textColor="#0f0f1a"
+        android:backgroundTint="#ff6b9d"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"/>
+
+</LinearLayout>
